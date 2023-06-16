@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
+    <script src="src/scripts/api.js"></script>
+    <title>Rick and Morty</title>
+</head>
+<body>
+    <header id="main-header">
+        <div class="wrapper">
+            <img src="src/resources/img/logo.png" alt="League Portal">
+            <h1>Wiki Morty</h1>
+            <div class="navbar">
+                <ul>
+                    <a href="index.html"><li>Início</li></a>
+                    <a href="#" onclick="abrirModal('modal-content-lista')"><li>Favoritos</li></a>
+                </ul>
+            </div>
+        </div>
+    </header>
+<!-- Modal -->
+    <div id="modal">
+        <div class="modal-content-lista">
+            <div class="modal-menu">
+                <h1>Meus favoritos</h1>
+                <span class="btn-fechar" onclick="fecharModal('modal-content-lista')">X</span>
+            </div>
+            <div class="modal-content">
+
+            </div>  
+        </div>
+    </div>
+<!-- Modal -->
+    <main>
+        <div class="body">
+            <div class="body1">             
+                <div class="lista-personagens">
+                    <h1>Lista de personagens</h1>
+                    <button class="voltar-pagina-disabled" style="background-color: grey;">Anterior</button>
+                    <button onclick="voltarPagina()" class="voltar-pagina">Anterior</button>
+                    <button onclick="proximaPagina()">Próximo</button>  
+                </div>
+            </div>
+            <div class="body2">
+                <h2 class="nome-personagem">
+                    Escolha um personagem
+                </h2>
+                <img class="image-persongem">
+                <div class="wrapper-btn">
+                    <button class="btn-favoritar">💚</button>
+                    <button class="btn-salvar">Salvar lista</button>
+                </div>
+                <div class="lista-pre-save">
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>userAction()</script>
+</body>
+</html>

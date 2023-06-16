@@ -1,0 +1,167 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: #000;
+    color: #FFF;
+    font-family: 'El Messiri', sans-serif;
+}
+#main-header{
+    height: 60px;
+    background: #1f1f1f;
+    padding: 0 20px;
+    margin-bottom:20px;
+}
+#main-header .navbar{
+    float:right;
+}
+#main-header .navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#main-header .navbar li{
+    display: inline;
+    margin-left: 50px;
+}
+#main-header .navbar a{
+    text-decoration: none;
+    color: #e89ac7;
+}
+#main-header h1{
+    margin: 5px 70px 0 0 ;
+}
+#main-header img{
+    width: 40px;
+    height: 40px;
+}
+#main-header .wrapper{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 60px;
+}
+.body{
+    background-color: #292929;
+    height: 700px;
+    width: 1200px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 3px;
+}
+.body1{
+    width: 40%;
+    float: left;
+    padding: 20px;
+}
+.body1 .lista-personagens{
+    margin-left: 20px;
+    color:	#97ce4c;
+}
+
+.body1 .lista-personagens li:hover{
+    color:	#e89ac7;
+}
+
+.body1 ul{
+    color:rgb(239, 239, 239);
+}
+.body2{
+    width: 50%;
+    float: right;
+    padding: 20px;
+}
+.body2 img{
+    width: 300px;
+    height: 300px;
+}
+.image-persongem{
+    margin: auto;
+    display: none;
+}
+.nome-personagem{
+    margin: auto;
+    display: none;
+    text-align: center;
+    color:#e89ac7;
+}
+.voltar-pagina{
+    display: none;
+}
+.lista-personagens button{
+    border: none;
+    outline: inherit;
+    color: #44281d;
+    background-color: #f0e14a;
+    font-family: 'El Messiri', sans-serif;
+    font-weight: bold;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#modal{
+    width: 100%;
+    height:90vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    display: none;
+}
+
+.modal-content-lista{
+    background-color: #97ce4c;
+    border-radius: 3px;
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    display: none;
+}
+#modal .btn-fechar{
+    cursor: pointer;
+    display: inline;
+    float:right;
+    font-size: 25px;
+    margin-top: 5px;
+}
+#modal .modal-menu{
+    width: 480px;
+    padding: 10px;
+}
+#modal .modal-menu h1{
+    display: inline;
+}
+.btn-favoritar{
+    margin: auto;
+    margin-top:12px;
+    background-color: #c3c3c3;
+    border: none;
+    border-radius: 3px;
+    display: none;
+    cursor: pointer;
+}
+.btn-salvar{
+    margin: auto;
+    background-color: #c3c3c3;
+    border: none;
+    border-radius: 3px;
+    display: none;
+    cursor: pointer;
+    height: 19px;
+    padding-top: 3px;
+}
+.wrapper-btn{
+    margin:auto;
+    justify-content: center;
+    width: 300px;
+}
+.lista-pre-save{
+    width: 300px;
+    margin: auto;
+    padding-top: 10px;
+    display: block;
+    padding-left: 7px;
+}
+.lista-pre-save img{
+    width: 50px;
+    height: 50px;
+    margin-inline-end: 10px;
+}
