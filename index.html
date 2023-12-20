@@ -8,18 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/src/resources/img/logo.png">
     <script src="src/scripts/api.js"></script>
-    <title>Rick and Morty</title>
+    <title>Wiki Morty</title>
 </head>
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="/src/resources/img/video.mp4" type="video/mp4">
+      </video>
     <header id="main-header">
         <div class="wrapper">
             <img src="src/resources/img/logo.png" alt="League Portal">
             <h1>Wiki Morty</h1>
             <div class="navbar">
                 <ul>
-                    <a href="index.html"><li>Início</li></a>
-                    <a href="#" onclick="abrirModal('modal-content-lista')"><li>Favoritos</li></a>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="#" onclick="abrirModal()"><li>List of favorites</li></a>
                 </ul>
             </div>
         </div>
@@ -28,11 +32,42 @@
     <div id="modal">
         <div class="modal-content-lista">
             <div class="modal-menu">
-                <h1>Meus favoritos</h1>
-                <span class="btn-fechar" onclick="fecharModal('modal-content-lista')">X</span>
+                <h1 class="h1-modal">My favorite characters</h1>
+                <span class="btn-fechar" onclick="fecharModal('modal-content-lista')">✖️</span>
             </div>
-            <div class="modal-content">
+            <div class="modal-content-1">
 
+            </div>  
+        </div>
+        <div class="modal-content-character">
+            <div class="modal-menu">
+                <h1 class="h1-name-char"></h1>
+                <span class="btn-fechar" onclick="voltarModalLista()">✖️</span>
+                <span class="btn-editar" >📝</span>
+                <span class="btn-excluir" >🗑️</span>
+            </div>
+            <div class="modal-content-2">
+
+            </div>  
+        </div>
+        <div class="modal-content-edit">
+            <div class="modal-menu">
+                <span class="btn-fechar" onclick="voltarModalCharacter()">✖️</span>
+            </div>
+            <div class="modal-content-3">
+                <form class="form-edit" action="javascript:;">
+                    <label for="inputName">Name</label><br>
+                    <input class="inputs-edit" id="inputName"><br>
+                    <label for="inputGender">Gender</label><br>
+                    <input class="inputs-edit" id="inputGender"><br>
+                    <label for="inputOrigin">Origin</label><br>
+                    <input class="inputs-edit" id="inputOrigin"><br>
+                    <label for="inputSpecies">Species </label><br>
+                    <input class="inputs-edit" id="inputSpecies"><br>
+                    <label for="inputStatus">Status</label><br>
+                    <input class="inputs-edit" id="inputStatus"><br>
+                    <input type="submit" value="Save changes" style="width: 200px;cursor:pointer"><br>
+                </form>
             </div>  
         </div>
     </div>
@@ -41,27 +76,37 @@
         <div class="body">
             <div class="body1">             
                 <div class="lista-personagens">
-                    <h1>Lista de personagens</h1>
-                    <button class="voltar-pagina-disabled" style="background-color: grey;">Anterior</button>
-                    <button onclick="voltarPagina()" class="voltar-pagina">Anterior</button>
-                    <button onclick="proximaPagina()">Próximo</button>  
+                    <h1>Characters list</h1>
+                    <spam class="hint"> Hint: Click on the pickle 🥒 to add characters to your list!
+                        And click on the character image on the list to remove then.
+                    </spam>
+                    <div class="wrapper-paginacao">
+                        <button class="voltar-pagina-disabled" style="background-color: grey;">◀</button>
+                        <button onclick="voltarPagina()" class="voltar-pagina">◀</button>
+                        <button onclick="proximaPagina()">▶</button> 
+                    </div>
                 </div>
             </div>
             <div class="body2">
                 <h2 class="nome-personagem">
-                    Escolha um personagem
+                    Choose your character
                 </h2>
-                <img class="image-persongem">
+                <div class="parent">
+                    <img class="portal-gif" src="src/resources/img/portal.gif" />
+                    <div class="image-shadow">
+                        <img class="image-persongem">
+                    </div>
+                </div>
                 <div class="wrapper-btn">
-                    <button class="btn-favoritar">💚</button>
-                    <button class="btn-salvar">Salvar lista</button>
+                    <button class="btn-favoritar">🥒</button>
+                    <button class="btn-salvar">Save list</button>
                 </div>
                 <div class="lista-pre-save">
-
                 </div>
             </div>
         </div>
+
     </main>
-    <script>userAction()</script>
+    <script>getListCharacters()</script>
 </body>
 </html>
